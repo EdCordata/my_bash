@@ -25,3 +25,10 @@ cd ~ && git clone https://github.com/EdCordata/my_bash.git && echo '. ~/my_bash/
 ```bash
 my_bash_update
 ```
+
+##### Note that all files should be CRLF & UTF-8.
+To fix wrong line endings, run:
+```bash
+sudo apt install -y dos2unix
+cd ~/my_bash && find . -type f -exec dos2unix "{}" \;
+```
