@@ -241,6 +241,7 @@ alias gc="git commit -m"
 # Docker
 # ----------------------------------------------
 alias dc="docker compose"
+alias docker-compose="echo 'DON'T USE docker-compose'"
 alias start_docker="sudo systemctl start docker && sudo chmod 666 /var/run/docker.sock;"
 alias stop_docker="sudo systemctl stop docker"
 alias restart_docker="sudo systemctl restart docker && sudo chmod 666 /var/run/docker.sock;"
@@ -291,4 +292,12 @@ alias restart_redis="sudo service redis-server restart"
 alias start_elastic_search="sudo service elasticsearch start"
 alias stop_elastic_search="sudo service elasticsearch stop"
 alias restart_elastic_search="sudo service elasticsearch restart"
+# ----------------------------------------------
+
+
+# Nginx
+# ----------------------------------------------
+alias start_nginx="sudo systemctl start nginx"
+alias stop_nginx="sudo systemctl stop nginx"
+alias restart_nginx="sudo systemctl restart nginx"
 # ----------------------------------------------
