@@ -1,2 +1,2 @@
-# set unix line endings
-text eol=crlf
+# Set all text files to use LF (Unix-style)
+* text eol=lf
