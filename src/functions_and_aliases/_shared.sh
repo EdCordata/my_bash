@@ -191,6 +191,37 @@ function if_folder_not_exists() {
 }
 
 
+function dos2unix_all() {
+  # Use the current directory if no path is provided
+  local path="${1:-.}"
+
+  # Check if the provided path is a directory
+  if [[ ! -d "$path" ]]; then
+    echo "The path '$path' is not a valid directory."
+    return 1
+  fi
+
+  # Loop through all files in the provided directory
+  find $path -maxdepth 1 -type f -exec dos2unix {} \;
+}
+
+
+function dos2unix_all_recursive() {
+  # Use the current directory if no path is provided
+  local path="${1:-.}"
+
+  # Check if the provided path is a directory
+  if [[ ! -d "$path" ]]; then
+    echo "The path '$path' is not a valid directory."
+    return 1
+  fi
+
+  # Loop through all files in the provided directory
+  find $path  -type f -exec dos2unix {} \;
+}
+
+
+
 # misc
 # ----------------------------------------------
 alias pingg="ping www.google.com"
