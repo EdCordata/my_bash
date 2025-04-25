@@ -265,6 +265,7 @@ alias gca="git commit --amend"
 alias gl="git log2"
 alias glm="git log --author=$(git config user.email)"
 alias ga="git add"
+alias gr="git restore --stage"
 alias gc="git commit -m"
 # ----------------------------------------------
 
