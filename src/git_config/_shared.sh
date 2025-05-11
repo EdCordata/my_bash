@@ -15,6 +15,10 @@ git config --system core.longpaths true
 # Set line endings to CRLF
 # ----------------------------------------------
 git config --global core.autocrlf true
+
+# fix line-endings automatically changing - cousing lots of files in diff without content changes
+# https://github.com/desktop/desktop/issues/3987#issuecomment-2037543542
+git config core.filemode false
 # ----------------------------------------------
 
 # Fix error setting certificate verify locations
