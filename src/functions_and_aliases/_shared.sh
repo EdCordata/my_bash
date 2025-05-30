@@ -24,6 +24,24 @@ function string_fixed_length() {
 }
 
 
+function trash() {
+
+  command -v gio >/dev/null 2>&1 && {
+    gio trash "$@"
+    return
+  }
+
+  command -v trash-put >/dev/null 2>&1 && {
+    trash-put "$@"
+    return
+  }
+
+  echo "No suitable trash utility found (requires 'gio' or 'trash-put')."
+  return 1
+}
+
+
+
 function git_pull_all() {
   if [ -z $1 ]; then
     echo "Specify remote";
